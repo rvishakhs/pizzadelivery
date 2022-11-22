@@ -7,7 +7,7 @@ type Props = {}
 
 function Header({}: Props) {
   return (
-    <header className="sticky top-0 z-30 flex items-center justify-between px-6 md:px-10 lg:px-16">
+    <header className=" top-0 flex items-center justify-between px-6 md:px-10 lg:px-16 ">
         <div className='flex items-center justify-center space-x-3'>
             <Link href="/">
                 <div className='relative h-20 w-10 cursor-pointer flex  opacity-80 transition hover:opacity-100'>
@@ -25,7 +25,7 @@ function Header({}: Props) {
             </div>
         </div>
 
-        <div className='hidden md:flex space-x-4 items-center justify-center'>
+        <div className='hidden md:flex space-x-10 items-center justify-center'>
             <p className='header link'>Home</p>
             <p className='header link'>Products</p>
             <p className='header link'>Contact</p>

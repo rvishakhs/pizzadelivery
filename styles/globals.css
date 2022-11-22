@@ -4,13 +4,19 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer base {
+    body {
+        @apply bg-gradient-to-b from-rose-300/50 to-white
+    }
+}
+
 
 @layer components {
     .header {
-        @apply text-lg opacity-80 font-semibold cursor-pointer transition hover:opacity-100
+        @apply text-xl opacity-80 font-semibold cursor-pointer transition hover:opacity-100
     }
     .link {
-        @apply relative cursor-pointer text-lg font-medium before:absolute before:inset-x-0 before:-bottom-1.5 
+        @apply relative cursor-pointer text-xl font-medium before:absolute before:inset-x-0 before:-bottom-1.5 
         before:h-0.5 before:origin-left before:scale-x-0 before:transform before:rounded-bl before:bg-black 
         before:transition-all before:duration-200 hover:before:scale-x-100
     }
