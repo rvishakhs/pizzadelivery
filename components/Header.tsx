@@ -1,6 +1,7 @@
 import Image from 'next/image'
 import Link from 'next/link'
 import React from 'react'
+import icon from "../public/favicon.png"
 import { CiSearch, CiShoppingBasket, CiUser  } from "react-icons/ci";
 
 type Props = {}
@@ -8,14 +9,15 @@ type Props = {}
 function Header({}: Props) {
   return (
     <header className=" top-0 flex items-center justify-between px-6 md:px-10 lg:px-16 ">
-        <div className='flex items-center gap-x-2 justify-center space-x-3'>
+        <div className='flex items-center justify-center space-x-3'>
             <Link href="/">
-                <div className='relative h-20 w-10 cursor-pointer flex  opacity-80 transition hover:opacity-100'>
+                <div className='relative h-20 w-20 items-center cursor-pointer flex pt-4 opacity-80 transition hover:opacity-100'>
                     <Image
-                        src="https://1000logos.net/wp-content/uploads/2016/10/Colors-Air-Jordan-Logo.jpg"
+                        src={icon}
                         layout='fill'
                         objectFit='contain'
                         alt='text'
+                        className='pt-3'
                     />
                 </div>
             </Link>
