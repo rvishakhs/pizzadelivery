@@ -7,9 +7,8 @@ type Props = {}
 
 export default function Footer({}: Props) {
   return (
-    <div className=' shadow-lg '
-    >
-        <div className='flex flex-col items-center justify-center p-2 font-medium'>
+    <div className=' shadow-lg bg-gradient-to-b from-white/10 to-black/20'>
+        <div className='flex flex-col items-center justify-center pt-6 font-medium'>
             <p className='text-sm '>
                 © 2022 Petite Pizza Co (UK) Ltd. All rights reserved.
             </p>
