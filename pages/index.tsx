@@ -4,6 +4,8 @@ import Image from 'next/image'
 import Header from '../components/Header'
 import Hero from '../components/Hero'
 import Layout from '../components/Layout'
+import Service from '../components/Service'
+
 
 const Home: NextPage = () => {
   return (
@@ -16,6 +18,7 @@ const Home: NextPage = () => {
 
           <main>
             <Hero />
+            <Service />
           </main>
         </div>
       </Layout>
