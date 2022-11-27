@@ -1,4 +1,4 @@
-import type { NextPage } from 'next'
+import type { GetServerSideProps, NextPage } from 'next'
 import Head from 'next/head'
 import Image from 'next/image'
 import Footer from '../components/Footer'
@@ -7,9 +7,20 @@ import Hero from '../components/Hero'
 import Layout from '../components/Layout'
 import Products from '../components/Products'
 import Service from '../components/Service'
+import { FetchCategories } from '../utils/FetchCategories'
+import { FetchProducts } from '../utils/FetchProducts'
+import { categories, products } from '../typings'
+
+interface Props {
+  categories : categories[]
+  products : products[]
+
+}
 
 
-const Home: NextPage = () => {
+const Home = ({products, categories}: Props) => {
+
+  console.log(categories)
   return (
         <div>
           <Head>
@@ -31,8 +42,12 @@ const Home: NextPage = () => {
 export default Home
 
 export const getServerSideProps : GetServerSideProps = async(context) => {
+  const categories : categories[] = await FetchCategories();
   const products: products[] = await FetchProducts() 
   return {
-
+  props : {
+      products,
+      categories
+    }
   }
 }
