@@ -12,8 +12,9 @@ type Props = {}
 
 function Hero ({}: Props) {
 
+
   return (
-    <section className='sticky  mx-auto flex items-center justify-between top-0 h-screen mx-w-[1350px] px-8 md:px-8 lg:px-16 '>
+    <section className=' mx-auto flex items-center justify-between top-0 h-screen mx-w-[1350px] px-8 md:px-8 lg:px-28 '>
 
         <div 
             className='w-full absolute top-[30%] bg-[#F7AB0A]/10 left-0 h-[300px] -skew-y-12'
