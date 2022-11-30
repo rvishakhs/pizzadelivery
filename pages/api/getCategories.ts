@@ -5,7 +5,7 @@ import { products } from '../../typings';
 import { categories } from '../../typings';
 
 const query = groq `
-    *[_type == "category"] 
+    *[_type == "category"] | order(_createdAt asc)
 `;
 
 type Data = {

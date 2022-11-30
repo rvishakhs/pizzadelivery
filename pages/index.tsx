@@ -30,7 +30,10 @@ const Home = ({products, categories}: Props) => {
           <main className='space-y-6'>
             <Hero />
             <Service />
-            <Products />
+            <Products 
+              categories={categories} 
+              products = {products}
+            />
           </main>
           <Footer />
         </div> 

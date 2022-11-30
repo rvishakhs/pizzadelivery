@@ -4,7 +4,7 @@ import {sanityClient} from "../../sanity"
 import { products } from '../../typings';
 
 const query = groq `
-    *[_type == "product"] 
+    *[_type == "product"] | order(_createdAt asc)
 `;
 
 type Data = {

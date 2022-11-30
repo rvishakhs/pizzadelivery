@@ -34,6 +34,7 @@ export interface products extends Sanitybody {
     price : number[];
     title : string;
     category : categories
+    categories : categories[]
     year : number;
     calory : string;
     spicy : boolean;
