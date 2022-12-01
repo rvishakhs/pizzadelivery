@@ -4,7 +4,7 @@ import {sanityClient} from "../../sanity"
 import { products } from '../../typings';
 
 const query = groq `
-    *[_type == "product"] | order(_createdAt asc)
+    *[_type == "product"] | order(_createdAt asc) 
 `;
 
 type Data = {
@@ -18,3 +18,5 @@ export default async function handler(
   const product : products[] = await sanityClient.fetch(query)
   res.status(200).json( {product} )
 }
+
+
