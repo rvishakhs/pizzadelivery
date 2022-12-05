@@ -36,10 +36,10 @@ export interface products extends Sanitybody {
     category : categories
     categories : categories[]
     year : number;
-    calory : string;
+    calories : string;
     spicy : boolean;
     glutenfree : boolean;
-    vegitarian : boolean;
+    Vegitarian : boolean;
     description : string
     slug: {
         _type: "slug";
