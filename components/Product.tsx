@@ -19,12 +19,6 @@ function Product({product}: Props) {
     const [size, setsize] = useState(0)
 
 
-    let colors = [
-        { id: "0", name: 'Medium'},
-        { id: "1", name: 'Small'},
-        { id: "2", name: 'Big' },
-
-      ];
 
     console.log(product)
     return (
@@ -73,18 +67,26 @@ function Product({product}: Props) {
         <div className='px-4 py-1 flex items-center space-x-2'>
             <p className='font-bold text-lg '>$ {product.price[size]}</p>
             <div>
-                <Dropdown autoClose={true} >
+                <Dropdown autoClose="inside" >
                     <Dropdown.Toggle  id="dropdown-autoclose-true">
                         Select Size
                     </Dropdown.Toggle>
 
-                    <Dropdown.Menu className='flex flex-col gap-1 bg-white p-2 font-medium text-xs'>
+                    <Dropdown.Menu className='flex flex-col gap-1 bg-white p-2 font-medium text-sm'>
                         <Dropdown.Item onClick={() => setsize(1)}>Small</Dropdown.Item>
-                        <Dropdown.Item onClick={() => setsize(0)}>Medium</Dropdown.Item>
+                        <Dropdown.Item active={true} onClick={() => setsize(0)}>Medium</Dropdown.Item>
                         <Dropdown.Item onClick={() => setsize(2)}>Large</Dropdown.Item>
                     </Dropdown.Menu>
                 </Dropdown>
                 </div>
+                {/* <div>
+                    <select id="cars" name="cars">
+                        <option onChange={(e) => setsize(1)} value="small">Small</option>
+                        <option onChange={() => setsize(0)} value="medium">Medium</option>
+                        <option onChange={() => setsize(2)}value="large">Large</option>
+                    </select>
+                    
+                </div> */}
         </div>
 
 {/* 
