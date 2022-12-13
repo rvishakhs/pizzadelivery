@@ -1,5 +1,6 @@
 import React from 'react'
 import { FetchProducts } from '../../utils/FetchProducts'
+import {sanityClient} from "../../sanity"
 
 type Props = {}
 
@@ -9,14 +10,11 @@ const Post = ({}: Props) => {
   )
 }
 
-
 export default Post
 
-
-
-
 export async function getStaticPaths(){
-    const paths = await client.fetch(
-        `*[_type =="product" && defined(slug.current)][].slug.current`
+    const paths = await sanityClient.fetch(
+      `*[_type =="product" && defined(slug.current)][].slug.current`
     );
 }
+
